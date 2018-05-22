@@ -9,5 +9,5 @@ A chat application built with Node.js and socket.io.
 # how to use
 
 1.download the code;<br/>
-2.run "npm start"
+2.run "npm start"<br/>
 3.enter "localhost:8080" in the browser
