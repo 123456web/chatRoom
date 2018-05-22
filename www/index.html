@@ -1,0 +1,121 @@
+<!DOCTYPE>
+<html>
+ <head>
+  <title> 聊天 </title>
+  <meta charset="utf-8"/>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="Description" content="">
+  <!-- <script type="text/javascript" src="/scoket.io/scoket.io.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="css/chatsPage.css">
+  <script src="lib/socket.io.js"></script>
+ </head>
+
+ <body>
+ <div class="login">
+   <div class="loginContainer">
+      <div>
+        <span class="loginTxt"></span>
+      </div>
+      <div>
+        <input type="text" name="" id="userName">
+      </div>
+      <input type="button" name="" value="登录" id="loginBtn">
+   </div>
+ </div>
+  <section>
+    <div class="head">
+        <div>在线聊天</div>
+        <p>在线人数<span class="statusOnline"></span> 人</p>
+    </div>
+    <div class="allChat">
+      <h1>all users</h1>
+      <div class="chatContainer">
+          <!-- <div class="chatlist system">
+             <img src="imgs/chatsIcon.png"/>
+             <div class="chatRight">
+              <p>system提醒<span>2018-04-15 13:50:05</span></p>
+              <div class="text">system提醒事项</div>
+             </div>
+          </div>
+          <div class="chatlist otherChat">
+             <img src="imgs/chatsIcon.png"/>
+             <div class="chatRight">
+              <p>碎碎酱<span>2018-04-15 13:50:05</span></p>
+              <div class="text">这是一段话</div>
+             </div>
+          </div>
+          <div class="chatlist self">
+             <img src="imgs/chatsIcon.png"/>
+             <div class="chatRight">
+              <p><span>2018-04-15 13:50:05</span></p>
+              <div class="text">这是一段话</div>
+             </div>
+          </div> -->
+      </div>
+      <div class="myJoin">
+          <div class="emoticonWrapper" style="display: none">
+          </div>
+          <div class="items">
+            <input type="color" name="" value="字体颜色" id="colorBtn">
+            <input type="button" name="" value="表情包" id="emoticonBtn">
+            <label class="sendImgLabel">
+              <input type="button" name="" value="图片" id="sendImgBtn">
+              <input type="file" name="" id="sendImg" style="display:none">
+            </label> 
+          </div>
+          <div class="myMsg">
+            <textarea id="msgTxt"></textarea>
+            <a href="javascript:void(0);" id="sendMyMsg">发送</a>
+          </div> 
+      </div>
+    </div>
+    <div class="oneToOneChat">
+      <h2>请选择要聊天对象(除了自己以外其他客户)</h2>
+      <div class="userOnline">  
+      </div>
+      <h1>您正在和<span class="touser"></span>单独聊天</h1>
+      <div class="chatContainer">
+      </div>
+      <div class="myJoin">
+          <div class="emoticonWrapper" style="display: none">
+          </div>
+          <div class="items">
+            <input type="color" name="" value="字体颜色" id="toOneColorBtn">
+            <input type="button" name="" value="表情包" id="toOneEmoticonBtn">
+            <label class="sendImgLabel">
+              <input type="button" name="" value="图片" id="toOneSendImgBtn">
+              <input type="file" name="" id="toOneSendImg" style="display: none;">
+            </label> 
+          </div>
+          <div class="myMsg">
+            <textarea id="toOneMsgTxt"></textarea>
+            <a href="javascript:void(0);" id="toOneSendMyMsg">发送</a>
+          </div> 
+      </div>
+    </div>
+  </section>  
+  <script>
+    window.onresize = r;
+    function r(resizeNum) {
+        //核心适配代码
+        var winW = window.innerWidth;
+        document.getElementsByTagName("html")[0].style.fontSize = winW * 0.15625 + "px";
+        //核心适配代码
+        if (winW > window.screen.width && resizeNum <= 10) {
+            setTimeout(function() {
+                r(++resizeNum)
+            }, 100);
+        } else {
+            document.getElementsByTagName("body")[0].style.opacity = 1;
+        }
+    }
+    setTimeout(function() {
+        r(0)
+    }, 100);
+  </script>
+  <script src="js/chatsPage.js"></script>
+ </body>
+</html>

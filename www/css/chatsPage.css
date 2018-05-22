@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.head {
+  background: black;
+  border-bottom: 1px solid #ccc;
+}
+.head div {
+  font-size: 0.18rem;
+  text-align: center;
+  color: #fff;
+}
+.head p {
+  font-size: 0.16rem;
+  text-align: center;
+  color: #fff;
+}
+.userOnline{
+  margin: 0.2rem;
+  font-size: 0.16rem;
+  border: 1px solid #ccc;
+}
+.userOnline span{
+  color: blue;
+}
+.oneToOneChat>h2{
+  font-size: 0.16rem;
+}
+.oneToOneChat .touser{
+  color: blue;
+}
+.allChat,.oneToOneChat{
+  border: 1px solid #ccc;
+  margin: 0.1rem;
+}
+.allChat>h1,.oneToOneChat>h1{
+  font-size: 0.20rem;
+  text-align: center;
+}
+.chatContainer {
+  padding: 0.1rem;
+  overflow: hidden;
+}
+.chatContainer .chatlist {
+  overflow: hidden;
+  margin-bottom: 0.1rem;
+}
+.chatContainer .chatlist > img {
+  float: left;
+  display: block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  border: 1px solid #27C4FD;
+  margin-right: 0.1rem;
+}
+.chatContainer .chatlist .chatRight {
+  float: left;
+  width: 5.2rem;
+}
+.chatContainer .chatlist .chatRight p {
+  height: 0.2rem;
+  line-height: 0.2rem;
+  font-size: 0.16rem;
+}
+.chatContainer .chatlist .chatRight p span {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  color: #ccc;
+}
+.chatContainer .chatlist .chatRight .text {
+  margin-top: 0.1rem;
+  font-size: 0.16rem;
+  border: 1px solid #27C4FD;
+  border-radius: 0.1rem;
+  padding: 0.1rem;
+}
+.chatContainer .chatlist .chatRight .text img{
+  /*display: block;*/
+  max-width: 99%;
+}
+.chatContainer .chatlist.system .chatRight p {
+  color: red;
+}
+.chatContainer .chatlist.system .chatRight .text {
+  color: red;
+}
+.chatContainer .chatlist.self > img {
+  float: right;
+}
+.chatContainer .chatlist.self .chatRight {
+  float: right;
+}
+.chatContainer .chatlist.self .chatRight p {
+  text-align: right;
+}
+.chatContainer .chatlist.self .chatRight .text {
+  text-align: right;
+  border: 1px solid #FF768A;
+  border-radius: 0.1rem;
+}
+.myJoin {
+  padding: 0.1rem;
+  position: relative;
+}
+.myJoin .items .sendImgLabel{
+  display: inline-block;
+  font-size: 0.14rem;
+}
+.myJoin .items .sendImgLabel a{
+  display: none;
+}
+.myJoin .items input {
+  float: left;
+  margin-right: 0.1rem;
+  width: 0.8rem;
+  height: 0.3rem;
+  font-size: 0.14rem;
+}
+.myJoin .myMsg {
+  margin-top: 0.1rem;
+}
+.myJoin .myMsg textarea {
+  padding: 0.1rem;
+  resize: none;
+  width: 5.0rem;
+  min-height: 1rem;
+  border: 1px solid #FF768A;
+  border-radius: 0.1rem;
+  border-outline: none;
+  font-size: 0.16rem;
+}
+.myJoin .myMsg a {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.16rem;
+  background: #FF768A;
+  border-radius: 0.1rem;
+  color: #fff;
+  text-align: center;
+}
+.login{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+.login .loginContainer{
+  width: 5.0rem;
+  height: 3.0rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login .loginContainer>div{
+  margin-bottom: 0.1rem;
+}
+.login .loginContainer>div .loginTxt{
+  color: red;
+  font-size: 0.16rem;
+}
+.login .loginContainer input[type="text"]{
+  width: 3.0rem;;
+  height: 0.3rem;
+}
+.login .loginContainer input[type="button"]{
+  width: 1.0rem;
+  height: 0.3rem;
+  margin: 0 auto;
+}
+.emoticonWrapper{
+  display: none;
+  position: absolute;
+  background: #aaa;
+  top: -1.6rem;
+  padding: 0.05rem 0rem 0rem 0.05rem;
+}
+.emoticonWrapper img{
+  width: 0.35rem;
+  height: 0.35rem;
+  margin-right: 0.05rem;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+ <head>
+  <title> 聊天 </title>
+  <meta charset="utf-8"/>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+  <section>
+    <div class="head">
+        <div>在线聊天</div>
+        <p>在线人数88888人</p>
+    </div>
+    <div class="chatContainer">
+        <div class="chatlist system">
+           <img src="./app/imgs/chatsIcon.png"/>
+           <div class="chatRight">
+            <p>system提醒<span>2018-04-15 13:50:05</span></p>
+            <div class="text">system提醒事项</div>
+           </div>
+        </div>
+        <div class="chatlist otherChat">
+           <img src="./app/imgs/chatsIcon.png"/>
+           <div class="chatRight">
+            <p>碎碎酱<span>2018-04-15 13:50:05</span></p>
+            <div class="text">这是一段话</div>
+           </div>
+        </div>
+        <div class="chatlist self">
+           <img src="./app/imgs/chatsIcon.png"/>
+           <div class="chatRight">
+            <p><span>2018-04-15 13:50:05</span></p>
+            <div class="text">这是一段话</div>
+           </div>
+        </div>
+    </div>
+    <div class="myJoin">
+        <div class="items">
+          <input type="button" name="" value="字体颜色">
+          <input type="button" name="" value="表情">
+        </div>
+        <div class="myMsg">
+          <textarea></textarea>
+          <a href="javascript:void(0);">发送</a>
+        </div> 
+    </div>
+  </section> 
+  <script>
+    window.onresize = r;
+    function r(resizeNum) {
+        //核心适配代码
+        var winW = window.innerWidth;
+        document.getElementsByTagName("html")[0].style.fontSize = winW * 0.15625 + "px";
+        //核心适配代码
+        if (winW > window.screen.width && resizeNum <= 10) {
+            setTimeout(function() {
+                r(++resizeNum)
+            }, 100);
+        } else {
+            document.getElementsByTagName("body")[0].style.opacity = 1;
+        }
+    }
+    setTimeout(function() {
+        r(0)
+    }, 100);
+  </script>
+  <script src="../public/js/pchatsPage.js"></script>
+ </body>
+</html>
