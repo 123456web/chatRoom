@@ -6,7 +6,8 @@ A chat application built with Node.js and socket.io.
 1.you can chat with all users online;<br/>
 2.you can also chat with one person one-to-one;<br/>
 
-#how to use
+# how to use
 
 1.download the code;<br/>
 2.run "npm start"
+3.enter "localhost:8080" in the browser
